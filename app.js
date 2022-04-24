@@ -1,4 +1,8 @@
 let allEmlpoyee=[] ;
+//let form = document.getElementById("form");
+let form= document.getElementById("form");
+let cardDev= document.getElementById("cardDiv");
+//console.log(form);
 function Employee(EmployeeId,fullName,Department,level,imageURL)
 {
 this.EmployeeId=EmployeeId;
@@ -29,11 +33,17 @@ Employee.prototype.GetSalary= function()
  }
 }
 Employee.prototype.render=function()
-{
-//let empdiv = document.getElementById('employees');
+{ cardDev.innerHTML+=`<div class="card">
+<img src ="./assets/card.png"/>
+<h4>${this.fullName}</h4>
+<h5>${this.salary}</h5>
+<h2>Employee ID : ${UniqueNum()}</h2>
+</div>
+`
+    /* document.write(`<img src ="./assets/card.png"/> `)
  document.write(`<h3>${this.fullName}</h3>`);
 document.write(`<h3>${this.salary}</h3>`);
-
+document.write(`<h2>Employee ID : ${UniqueNum()}</h2>`); */
 }
 
 let emp1 = new Employee('1000','Ghazi Samer','Adminstration','Senior');
@@ -61,3 +71,33 @@ emp5.render();
 emp6.render();
 emp7.render();
 //document.writeln(newEmployee);
+//****************************************************************************************************** */
+
+
+form.addEventListener("submit",handleSubmit);
+
+function handleSubmit(event)
+ {
+    event.preventDefault(); 
+   // console.log(event.target.fname.value);
+let full_Name = event.target.fname.value ;
+let depart= event.target.Deps.value;
+let levels=event.target.levels.value;
+let image = event.target.image.value ;
+console.log(full_Name,depart,levels,image);
+
+let newEmp= new Employee (full_Name,depart,levels,image);
+newEmp.render(); 
+
+}
+ 
+
+function UniqueNum () 
+{
+
+    var val = Math.floor(1000 + Math.random() * 9000);
+    return val
+    
+}
+
+
