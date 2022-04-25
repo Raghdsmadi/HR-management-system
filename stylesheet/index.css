@@ -128,7 +128,7 @@ tr:hover {background-color: #dfd2d2;}
     -moz-border-radius: 3px;
     border: 1px solid #FFC2DC;
     outline: none;
-    color: #F072A9;
+    color: #ecc7d7;
     padding: 5px 8px 5px 8px;
     box-shadow: inset 1px 1px 4px #FFD5E7;
     -moz-box-shadow: inset 1px 1px 4px #FFD5E7;
@@ -139,13 +139,13 @@ tr:hover {background-color: #dfd2d2;}
 }
 .form-style  input[type=submit],
 .form-style  input[type=button]{
-    background: #EB3B88;
-    border: 1px solid #C94A81;
+    background: #e6ccd7;
+    border: 1px solid #f5f1f3;
     padding: 5px 15px 5px 15px;
-    color: #FFCBE2;
-    box-shadow: inset -1px -1px 3px #FF62A7;
-    -moz-box-shadow: inset -1px -1px 3px #FF62A7;
-    -webkit-box-shadow: inset -1px -1px 3px #FF62A7;
+    color: #d33775;
+    box-shadow: inset -1px -1px 3px #694f5a;
+    -moz-box-shadow: inset -1px -1px 3px #694f5a;
+    -webkit-box-shadow: inset -1px -1px 3px #694f5a;
     border-radius: 3px;
     border-radius: 3px;
     -webkit-border-radius: 3px;
